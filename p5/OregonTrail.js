@@ -1,9 +1,11 @@
 // Oregon Trail
 // Edan L'Heureux
 // --/--/2019
-
+////////////////////////////////////////////////////////////////////////////////
+let state;
 let food;
 let clothes;
+
 
 let music,music1,music2,music3;
 let music4,music5,music6,music7;
@@ -16,9 +18,11 @@ let img4,img5,img6,img7;
 let img8,img9,img10,img11;
 let img12,img13,img14,img15;
 let img16,img17,img18,imgmap;
+let imgwagon,imgforest;
 
 
 
+////////////////////////////////////////////////////////////////////////////////
 function preload(){
   /// sound files for all locations
   music = loadSound("assets/Oregon-Trail-Title-Screen1.mp3");
@@ -62,21 +66,94 @@ function preload(){
   img17 = loadImage("assets/The-Dalles.PNG");
   img18 = loadImage("assets/Willamette-Valley.PNG");
   imgmap = loadImage("assets/map.png");
+  imgwagon = loadImage("assets/wagon.PNG");
+  imgforest = loadImage("assets/forest.png");
 }
+//////////////////////////////////////////////////////////////////////////////
 
 
-
+//////////////////////////////////////////////
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(1600, 780);
+  state =1;
 
   music.setVolume(0.7);
-
+  music.loop();
 }
+///////////////////////////////////////////
 
+
+///////////////////////////////////////////////
 function draw() {
-
+  stateis();
 }
+///////////////////////////////////////////////
+
+
+
+/////////////////////////////////////////////////////
+/// displays the main menu
+function mainmenu(){
+  background(255);
+  image(img,0,0,windowWidth,windowHeight);
+  fill(242,238,43);
+  rect(1157, 695, 276, 27);
+  if (mouseX < 1157+276 && mouseX > 1157 && mouseY < 695+27 && mouseY > 695){
+    fill(190,249,10);
+    rect(1157, 695, 276, 27);
+  }
+  fill(0);
+  textStyle(ITALIC);
+  textSize(20);
+  text("Travle The Trail",1220, 715);
+/////////////////////////////////////////////////////////
+}
+////////////////////////////////////////////////////////
+function gametime(){
+  image(img1,0,0,windowWidth,windowHeight);
+  music1.setVolume(0.7);
+  music1.loop();
+}
+////////////////////////////////////////////////////////
+
+function trailtime(){
+  image(imgforest,0,0,windowWidth,windowHeight);
+}
+
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+/// registers changes of states
 
 function mousePressed() {
-  music.loop();
+  //console.log(mouseX, mouseY);
+  if (mouseX <= 1157+276 && mouseX >= 1157 && mouseY <= 695+27 && mouseY >= 695){
+    state = 2;
+    music.stop;
+  }
+}
+///////////////////////////////////////////////////////
+
+///////////////////////////////////////////////
+/// determines what the state is and what is to be displayed on screen
+function stateis(){
+  if (state ===1){
+    mainmenu();
+  }
+  if (state === 2){
+    gametime();
+  }
+  if (state === 3.5){
+    trailtime();
+  }
+}
+//////////////////////////////////////////////////
+
+function keyPressed(){
+  if (state === 2){
+    if (key === " "){
+      state =3.5;
+    }
+  }
 }
