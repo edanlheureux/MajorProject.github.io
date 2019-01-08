@@ -20,6 +20,9 @@ let img12,img13,img14,img15;
 let img16,img17,img18,imgmap;
 let imgwagon,imgforest;
 
+let imgop1,imgop2,imgop3,imgop4,imgop5;
+let imgop6,imgop7,imgop8,imgop9,imgop10;
+let imgop11,imgop12,imgop13;
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -68,6 +71,21 @@ function preload(){
   imgmap = loadImage("assets/map.png");
   imgwagon = loadImage("assets/wagon.PNG");
   imgforest = loadImage("assets/forest.png");
+  ////////////////////////////////////////////////////////////////////////
+  /// open world events and locations
+  imgop1 = loadImage("assets/openworldfort.PNG");
+  imgop2 = loadImage("assets/openworldfort2.PNG");
+  imgop3 = loadImage("assets/openworldmnt.PNG");
+  imgop4 = loadImage("assets/openworldoxdies.PNG");
+  imgop5 = loadImage("assets/openworldriver.PNG");
+  imgop6 = loadImage("assets/openworldrock.PNG");
+  imgop7 = loadImage("assets/openworldrock2.PNG");
+  imgop8 = loadImage("assets/openworldrock3.PNG");
+  imgop9 = loadImage("assets/openworldspring.PNG");
+  imgop10 = loadImage("assets/openworldtown.PNG");
+  imgop11 = loadImage("assets/oxhurt.PNG");
+  imgop12 = loadImage("assets/theif.PNG");
+  imgop13 = loadImage("assets/wrongtrail.PNG");
 }
 //////////////////////////////////////////////////////////////////////////////
 
@@ -116,8 +134,38 @@ function gametime(){
 }
 ////////////////////////////////////////////////////////
 
+function trailtoriv(){
+  image;
+}
+function river1(){
+  image;
+}
+function river1toriver2(){
+  image;
+}
+function river2(){
+  image;
+}
+function riv2tofrtkern(){
+  image;
+}
+function fortkern(){
+  image;
+}
+function fortkerntochimney(){
+  image;
+}
+function chimneyrck(){
+  image;
+}
+function chimtofrtlarm(){
+  image;
+}
+function fortlarm(){
+  image;
+}
 function trailtime(){
-  image(imgforest,0,0,windowWidth,windowHeight);
+  image;
 }
 
 
@@ -144,8 +192,35 @@ function stateis(){
   if (state === 2){
     gametime();
   }
+  if (state === 2.5){
+    trailtoriv();
+  }
+  if (state === 3){
+    river1();
+  }
   if (state === 3.5){
-    trailtime();
+    river1toriver2();
+  }
+  if (state === 4){
+    river2();
+  }
+  if (state === 4.5){
+    riv2tofrtkern();
+  }
+  if (state === 5){
+    fortkern();
+  }
+  if (state === 5.5){
+    fortkerntochimney();
+  }
+  if (state === 6){
+    chimneyrck();
+  }
+  if (state === 6.5){
+    chimtofrtlarm();
+  }
+  if (state === 7){
+    fortlarm();
   }
 }
 //////////////////////////////////////////////////
