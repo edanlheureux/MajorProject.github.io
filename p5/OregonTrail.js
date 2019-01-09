@@ -18,7 +18,7 @@ let img4,img5,img6,img7;
 let img8,img9,img10,img11;
 let img12,img13,img14,img15;
 let img16,img17,img18,imgmap;
-let imgwagon,imgforest;
+let imgwagon;
 
 let imgop1,imgop2,imgop3,imgop4,imgop5;
 let imgop6,imgop7,imgop8,imgop9,imgop10;
@@ -70,7 +70,6 @@ function preload(){
   img18 = loadImage("assets/Willamette-Valley.PNG");
   imgmap = loadImage("assets/map.png");
   imgwagon = loadImage("assets/wagon.PNG");
-  imgforest = loadImage("assets/forest.png");
   ////////////////////////////////////////////////////////////////////////
   /// open world events and locations
   imgop1 = loadImage("assets/openworldfort.PNG");
@@ -135,38 +134,104 @@ function gametime(){
 ////////////////////////////////////////////////////////
 
 function trailtoriv(){
-  image;
+  image(imgop5,0,0,windowWidth,windowHeight);
 }
 function river1(){
-  image;
+  image(img2,0,0,windowWidth,windowHeight);
 }
 function river1toriver2(){
-  image;
+  image(imgop5,0,0,windowWidth,windowHeight);
 }
 function river2(){
-  image;
+  image(img3,0,0,windowWidth,windowHeight);
 }
 function riv2tofrtkern(){
-  image;
+  image(imgop10,0,0,windowWidth,windowHeight);
 }
 function fortkern(){
-  image;
+  image(img4,0,0,windowWidth,windowHeight);
 }
 function fortkerntochimney(){
-  image;
+  image(imgop6,0,0,windowWidth,windowHeight);
 }
 function chimneyrck(){
-  image;
+  image(img5,0,0,windowWidth,windowHeight);
 }
 function chimtofrtlarm(){
-  image;
+  image(imgop2,0,0,windowWidth,windowHeight);
 }
 function fortlarm(){
+  image(img6,0,0,windowWidth,windowHeight);
+}
+function fortlarmtoindirock(){
+  image(imgop7,0,0,windowWidth,windowHeight);
+}
+function indirock(){
+  image(img7,0,0,windowWidth,windowHeight);
+}
+function indirocktosouthpass(){
+  image(imgop8,0,0,windowWidth,windowHeight);
+}
+function southpass(){
+  image(img8,0,0,windowWidth,windowHeight);
+}
+function southpasstogrnriver(){
+  image(imgop5,0,0,windowWidth,windowHeight);
+}
+function greenriver(){
+  image(img9,0,0,windowWidth,windowHeight);
+}
+function grnrivertosodasprings(){
+  image(imgop9,0,0,windowWidth,windowHeight);
+}
+function sodasprings(){
+  image(img10,0,0,windowWidth,windowHeight);
+}
+function sodaspringstofthall(){
+  image(imgop2,0,0,windowWidth,windowHeight);
+}
+function fthall(){
+  image(img11,0,0,windowWidth,windowHeight);
+}
+function fthalltosnakeriver(){
+  image(imgop5,0,0,windowWidth,windowHeight);
+}
+function snakeriver(){
+  image(img12,0,0,windowWidth,windowHeight);
+}
+function snakerivertoftboise(){
+  image(imgop1,0,0,windowWidth,windowHeight);
+}
+function ftboise(){
+  image(img13,0,0,windowWidth,windowHeight);
+}
+function ftboisetobluemnt(){
   image;
 }
-function trailtime(){
+function bluemnt(){
+  image(img14,0,0,windowWidth,windowHeight);
+}
+function bluemnttodales(){
   image;
 }
+function thedalles(){
+  image(img15,0,0,windowWidth,windowHeight);
+}
+function dallestowillamentvly(){
+  image;
+}
+function Willamettevalley(){
+  image(img16,0,0,windowWidth,windowHeight);
+}
+function youwin(){
+  image;
+}
+function youlose(){
+  image;
+}
+
+
+
 
 
 
@@ -222,13 +287,81 @@ function stateis(){
   if (state === 7){
     fortlarm();
   }
+  if (state === 7){
+    fortlarmtoindirock();
+  }
 }
 //////////////////////////////////////////////////
 
 function keyPressed(){
   if (state === 2){
     if (key === " "){
+      state =2.5;
+    }
+  }
+  if (state === 3){
+    if (key === " "){
       state =3.5;
+    }
+  }
+  if (state === 4){
+    if (key === " "){
+      state =4.5;
+    }
+  }
+  if (state === 5){
+    if (key === " "){
+      state =5.5;
+    }
+  }
+  if (state === 6){
+    if (key === " "){
+      state =6.5;
+    }
+  }
+  if (state === 7){
+    if (key === " "){
+      state =7.5;
+    }
+  }
+  if (state === 8){
+    if (key === " "){
+      state =8.5;
+    }
+  }
+  if (state === 9){
+    if (key === " "){
+      state =9.5;
+    }
+  }
+  if (state === 10){
+    if (key === " "){
+      state =10.5;
+    }
+  }
+  if (state === 11){
+    if (key === " "){
+      state =11.5;
+    }
+  }
+  if (state === 12){
+    if (key === " "){
+      state =12.5;
+    }
+  }
+  if (state === 13){
+    if (key === " "){
+      state =13.5;
+    }
+  }
+  if (state === 14){
+    if (key === " "){
+      state =14.5;
+    }
+  }
+  if (state === 15){
+    if (key === " "){
+      state =15.5;
     }
   }
 }
