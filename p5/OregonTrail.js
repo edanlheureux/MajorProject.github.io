@@ -5,6 +5,12 @@
 let state;
 let food;
 let clothes;
+let wagon;
+let nxtlndmrk;
+let weather;
+let health;
+let totalmiles;
+let date;
 
 
 let music,music1,music2,music3;
@@ -18,7 +24,7 @@ let img4,img5,img6,img7;
 let img8,img9,img10,img11;
 let img12,img13,img14,img15;
 let img16,img17,img18,imgmap;
-let imgwagon;
+let imgwagon,imgwin,imgloose;
 
 let imgop1,imgop2,imgop3,imgop4,imgop5;
 let imgop6,imgop7,imgop8,imgop9,imgop10;
@@ -70,6 +76,8 @@ function preload(){
   img18 = loadImage("assets/Willamette-Valley.PNG");
   imgmap = loadImage("assets/map.png");
   imgwagon = loadImage("assets/wagon.PNG");
+  imgwin = loadImage("assets/youwin.png");
+  imgloose = loadImage("assets/youlose.png");
   ////////////////////////////////////////////////////////////////////////
   /// open world events and locations
   imgop1 = loadImage("assets/openworldfort.PNG");
@@ -93,9 +101,13 @@ function preload(){
 function setup() {
   createCanvas(1600, 780);
   state =1;
-
-  music.setVolume(0.7);
-  music.loop();
+  if(state ===1){
+    music.setVolume(0.7);
+    music.loop();
+  }
+  if(state !==1){
+    music.stop();
+  }
 }
 ///////////////////////////////////////////
 
@@ -103,6 +115,12 @@ function setup() {
 ///////////////////////////////////////////////
 function draw() {
   stateis();
+  nxtlndmrk = 125;
+  health =100;
+  food =2000;
+  totalmiles=4;
+  weather=5;
+  date=text(0,10,1834);
 }
 ///////////////////////////////////////////////
 
@@ -122,7 +140,7 @@ function mainmenu(){
   fill(0);
   textStyle(ITALIC);
   textSize(20);
-  text("Travle The Trail",1220, 715);
+  text("Travel The Trail",1220, 715);
 /////////////////////////////////////////////////////////
 }
 ////////////////////////////////////////////////////////
@@ -135,6 +153,37 @@ function gametime(){
 
 function trailtoriv(){
   image(imgop5,0,0,windowWidth,windowHeight);
+
+  fill(0);
+  rect(850, 690, 126, 20);
+  fill(255);
+  text(nxtlndmrk, 893, 690, 276, 20);
+
+  fill(0);
+  rect(850, 660, 126, 20);
+  fill(255);
+  text(food, 893, 660, 276, 20);
+
+  fill(0);
+  rect(850, 632, 126, 20);
+  fill(255);
+  text(health, 893, 632, 276, 20);
+
+  fill(0);
+  rect(850, 720, 126, 20);
+  fill(255);
+  text(totalmiles, 893, 720, 276, 20);
+
+  fill(0);
+  rect(850, 600, 126, 20);
+  fill(255);
+  text(weather, 893, 600, 276, 20);
+
+  fill(0);
+  rect(850, 570, 126, 20);
+  fill(255);
+  text(date, 893, 570, 276, 20);
+
 }
 function river1(){
   image(img2,0,0,windowWidth,windowHeight);
@@ -163,7 +212,7 @@ function chimtofrtlarm(){
 function fortlarm(){
   image(img6,0,0,windowWidth,windowHeight);
 }
-function fortlarmtoindirock(){
+function fortlarmtoindiroc(){
   image(imgop7,0,0,windowWidth,windowHeight);
 }
 function indirock(){
@@ -206,25 +255,25 @@ function ftboise(){
   image(img13,0,0,windowWidth,windowHeight);
 }
 function ftboisetobluemnt(){
-  image;
+  image(imgop3,0,0,windowWidth,windowHeight);
 }
 function bluemnt(){
   image(img14,0,0,windowWidth,windowHeight);
 }
 function bluemnttodales(){
-  image;
+  image(imgop1,0,0,windowWidth,windowHeight);
 }
 function thedalles(){
   image(img15,0,0,windowWidth,windowHeight);
 }
 function dallestowillamentvly(){
-  image;
+  image(imgop3,0,0,windowWidth,windowHeight);
 }
 function Willamettevalley(){
   image(img16,0,0,windowWidth,windowHeight);
 }
 function youwin(){
-  image;
+  image(img);
 }
 function youlose(){
   image;
@@ -241,9 +290,11 @@ function youlose(){
 
 function mousePressed() {
   //console.log(mouseX, mouseY);
-  if (mouseX <= 1157+276 && mouseX >= 1157 && mouseY <= 695+27 && mouseY >= 695){
-    state = 2;
-    music.stop;
+  if (state ===1){
+    if (mouseX <= 1157+276 && mouseX >= 1157 && mouseY <= 695+27 && mouseY >= 695){
+      state = 2;
+      music.stop;
+    }
   }
 }
 ///////////////////////////////////////////////////////
@@ -287,8 +338,68 @@ function stateis(){
   if (state === 7){
     fortlarm();
   }
-  if (state === 7){
-    fortlarmtoindirock();
+  if (state === 7.5){
+    fortlarmtoindiroc();
+  }
+  if (state === 8){
+    indirock();
+  }
+  if (state === 8.5){
+    indirocktosouthpass();
+  }
+  if (state === 9){
+    southpass();
+  }
+  if (state === 9.5){
+    southpasstogrnriver();
+  }
+  if (state === 10){
+    greenriver();
+  }
+  if (state === 10.5){
+    grnrivertosodasprings();
+  }
+  if (state === 11){
+    sodasprings();
+  }
+  if (state === 11.5){
+    sodaspringstofthall();
+  }
+  if (state === 12){
+    fthall();
+  }
+  if (state === 12.5){
+    fthalltosnakeriver();
+  }
+  if (state === 13){
+    snakeriver();
+  }
+  if (state === 13.5){
+    snakerivertoftboise();
+  }
+  if (state === 14){
+    ftboise();
+  }
+  if (state === 14.5){
+    ftboisetobluemnt();
+  }
+  if (state === 15){
+    bluemnt();
+  }
+  if (state === 15.5){
+    bluemnttodales();
+  }
+  if (state === 16){
+    thedalles();
+  }
+  if (state === 16.5){
+    dallestowillamentvly();
+  }
+  if (state === 17){
+    Willamettevalley();
+  }
+  if (state === 17.5){
+    youwin();
   }
 }
 //////////////////////////////////////////////////
@@ -362,6 +473,16 @@ function keyPressed(){
   if (state === 15){
     if (key === " "){
       state =15.5;
+    }
+  }
+  if (state === 16){
+    if (key === " "){
+      state =16.5;
+    }
+  }
+  if (state === 17){
+    if (key === " "){
+      state =17.5;
     }
   }
 }
