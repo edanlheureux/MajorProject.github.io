@@ -101,13 +101,149 @@ function preload(){
 function setup() {
   createCanvas(1600, 780);
   state =1;
-  if(state ===1){
-    music.setVolume(0.7);
-    music.loop();
-  }
-  if(state !==1){
-    music.stop();
-  }
+  // if(state ===1){
+  //   music.setVolume(0.7);
+  //   music.loop();
+  // }
+  // if(state !==1){
+  //   music.stop();
+  // }
+  // state =2;
+  // if(state ===2){
+  //   music1.setVolume(0.7);
+  //   music1.loop();
+  // }
+  // if(state !==2){
+  //   music1.stop();
+  // }
+  // state =3;
+  // if(state ===3){
+  //   music3.setVolume(0.7);
+  //   music3.loop();
+  // }
+  // if(state !==3){
+  //   music3.stop();
+  // }
+  // state =4;
+  // if(state ===4){
+  //   music4.setVolume(0.7);
+  //   music4.loop();
+  // }
+  // if(state !==4){
+  //   music4.stop();
+  // }
+  // state =5;
+  // if(state ===5){
+  //   music5.setVolume(0.7);
+  //   music5.loop();
+  // }
+  // if(state !==5){
+  //   music5.stop();
+  // }
+  // state =6;
+  // if(state ===6){
+  //   music6.setVolume(0.7);
+  //   music6.loop();
+  // }
+  // if(state !==7){
+  //   music6.stop();
+  // }
+  // state =7;
+  // if(state ===8){
+  //   music7.setVolume(0.7);
+  //   music7.loop();
+  // }
+  // if(state !==7){
+  //   music7.stop();
+  // }
+  // state =8;
+  // if(state ===8){
+  //   music8.setVolume(0.7);
+  //   music8.loop();
+  // }
+  // if(state !==8){
+  //   music8.stop();
+  // }
+  // state =9;
+  // if(state ===9){
+  //   music9.setVolume(0.7);
+  //   music9.loop();
+  // }
+  // if(state !==9){
+  //   music9.stop();
+  // }
+  // state =10;
+  // if(state ===10){
+  //   music10.setVolume(0.7);
+  //   music10.loop();
+  // }
+  // if(state !==10){
+  //   music10.stop();
+  // }
+  // state =11;
+  // if(state ===11){
+  //   music11.setVolume(0.7);
+  //   music11.loop();
+  // }
+  // if(state !==11){
+  //   music11.stop();
+  // }
+  // state =12;
+  // if(state ===12){
+  //   music12.setVolume(0.7);
+  //   music12.loop();
+  // }
+  // if(state !==12){
+  //   music12.stop();
+  // }
+  // state =13;
+  // if(state ===13){
+  //   music13.setVolume(0.7);
+  //   music13.loop();
+  // }
+  // if(state !==13){
+  //   music13.stop();
+  // }
+  // state =14;
+  // if(state ===14){
+  //   music14.setVolume(0.7);
+  //   music14.loop();
+  // }
+  // if(state !==14){
+  //   music14.stop();
+  // }
+  // state =15;
+  // if(state ===15){
+  //   music15.setVolume(0.7);
+  //   music15.loop();
+  // }
+  // if(state !==15){
+  //   music15.stop();
+  // }
+  // state =16;
+  // if(state ===16){
+  //   music16.setVolume(0.7);
+  //   music16.loop();
+  // }
+  // if(state !==16){
+  //   music16.stop();
+  // }
+  // state =17;
+  // if(state ===17){
+  //   music17.setVolume(0.7);
+  //   music17.loop();
+  // }
+  // if(state !==17){
+  //   music17.stop();
+  // }
+  // state =18;
+  // if(state ===18){
+  //   music18.setVolume(0.7);
+  //   music18.loop();
+  // }
+  // if(state !==18){
+  //   music18.stop();
+  // }
 }
 ///////////////////////////////////////////
 
@@ -120,7 +256,7 @@ function draw() {
   food =2000;
   totalmiles=4;
   weather=5;
-  date=text(0,10,1834);
+  date= 0,10,1834;
 }
 ///////////////////////////////////////////////
 
@@ -146,8 +282,8 @@ function mainmenu(){
 ////////////////////////////////////////////////////////
 function gametime(){
   image(img1,0,0,windowWidth,windowHeight);
-  music1.setVolume(0.7);
-  music1.loop();
+//   music1.setVolume(0.7);
+//   music1.loop();
 }
 ////////////////////////////////////////////////////////
 
@@ -190,93 +326,499 @@ function river1(){
 }
 function river1toriver2(){
   image(imgop5,0,0,windowWidth,windowHeight);
+  fill(0);
+  rect(850, 690, 126, 20);
+  fill(255);
+  text(nxtlndmrk, 893, 690, 276, 20);
+
+  fill(0);
+  rect(850, 660, 126, 20);
+  fill(255);
+  text(food, 893, 660, 276, 20);
+
+  fill(0);
+  rect(850, 632, 126, 20);
+  fill(255);
+  text(health, 893, 632, 276, 20);
+
+  fill(0);
+  rect(850, 720, 126, 20);
+  fill(255);
+  text(totalmiles, 893, 720, 276, 20);
+
+  fill(0);
+  rect(850, 600, 126, 20);
+  fill(255);
+  text(weather, 893, 600, 276, 20);
+
+  fill(0);
+  rect(850, 570, 126, 20);
+  fill(255);
+  text(date, 893, 570, 276, 20);
 }
 function river2(){
   image(img3,0,0,windowWidth,windowHeight);
 }
 function riv2tofrtkern(){
   image(imgop10,0,0,windowWidth,windowHeight);
+  fill(0);
+  rect(850, 690, 126, 20);
+  fill(255);
+  text(nxtlndmrk, 893, 690, 276, 20);
+
+  fill(0);
+  rect(850, 660, 126, 20);
+  fill(255);
+  text(food, 893, 660, 276, 20);
+
+  fill(0);
+  rect(850, 632, 126, 20);
+  fill(255);
+  text(health, 893, 632, 276, 20);
+
+  fill(0);
+  rect(850, 720, 126, 20);
+  fill(255);
+  text(totalmiles, 893, 720, 276, 20);
+
+  fill(0);
+  rect(850, 600, 126, 20);
+  fill(255);
+  text(weather, 893, 600, 276, 20);
+
+  fill(0);
+  rect(850, 570, 126, 20);
+  fill(255);
+  text(date, 893, 570, 276, 20);
 }
 function fortkern(){
   image(img4,0,0,windowWidth,windowHeight);
 }
 function fortkerntochimney(){
   image(imgop6,0,0,windowWidth,windowHeight);
+  fill(0);
+  rect(850, 690, 126, 20);
+  fill(255);
+  text(nxtlndmrk, 893, 690, 276, 20);
+
+  fill(0);
+  rect(850, 660, 126, 20);
+  fill(255);
+  text(food, 893, 660, 276, 20);
+
+  fill(0);
+  rect(850, 632, 126, 20);
+  fill(255);
+  text(health, 893, 632, 276, 20);
+
+  fill(0);
+  rect(850, 720, 126, 20);
+  fill(255);
+  text(totalmiles, 893, 720, 276, 20);
+
+  fill(0);
+  rect(850, 600, 126, 20);
+  fill(255);
+  text(weather, 893, 600, 276, 20);
+
+  fill(0);
+  rect(850, 570, 126, 20);
+  fill(255);
+  text(date, 893, 570, 276, 20);
 }
 function chimneyrck(){
   image(img5,0,0,windowWidth,windowHeight);
 }
 function chimtofrtlarm(){
   image(imgop2,0,0,windowWidth,windowHeight);
+  fill(0);
+  rect(850, 690, 126, 20);
+  fill(255);
+  text(nxtlndmrk, 893, 690, 276, 20);
+
+  fill(0);
+  rect(850, 660, 126, 20);
+  fill(255);
+  text(food, 893, 660, 276, 20);
+
+  fill(0);
+  rect(850, 632, 126, 20);
+  fill(255);
+  text(health, 893, 632, 276, 20);
+
+  fill(0);
+  rect(850, 720, 126, 20);
+  fill(255);
+  text(totalmiles, 893, 720, 276, 20);
+
+  fill(0);
+  rect(850, 600, 126, 20);
+  fill(255);
+  text(weather, 893, 600, 276, 20);
+
+  fill(0);
+  rect(850, 570, 126, 20);
+  fill(255);
+  text(date, 893, 570, 276, 20);
 }
 function fortlarm(){
   image(img6,0,0,windowWidth,windowHeight);
 }
 function fortlarmtoindiroc(){
   image(imgop7,0,0,windowWidth,windowHeight);
+  fill(0);
+  rect(850, 690, 126, 20);
+  fill(255);
+  text(nxtlndmrk, 893, 690, 276, 20);
+
+  fill(0);
+  rect(850, 660, 126, 20);
+  fill(255);
+  text(food, 893, 660, 276, 20);
+
+  fill(0);
+  rect(850, 632, 126, 20);
+  fill(255);
+  text(health, 893, 632, 276, 20);
+
+  fill(0);
+  rect(850, 720, 126, 20);
+  fill(255);
+  text(totalmiles, 893, 720, 276, 20);
+
+  fill(0);
+  rect(850, 600, 126, 20);
+  fill(255);
+  text(weather, 893, 600, 276, 20);
+
+  fill(0);
+  rect(850, 570, 126, 20);
+  fill(255);
+  text(date, 893, 570, 276, 20);
 }
 function indirock(){
   image(img7,0,0,windowWidth,windowHeight);
 }
 function indirocktosouthpass(){
   image(imgop8,0,0,windowWidth,windowHeight);
+  fill(0);
+  rect(850, 690, 126, 20);
+  fill(255);
+  text(nxtlndmrk, 893, 690, 276, 20);
+
+  fill(0);
+  rect(850, 660, 126, 20);
+  fill(255);
+  text(food, 893, 660, 276, 20);
+
+  fill(0);
+  rect(850, 632, 126, 20);
+  fill(255);
+  text(health, 893, 632, 276, 20);
+
+  fill(0);
+  rect(850, 720, 126, 20);
+  fill(255);
+  text(totalmiles, 893, 720, 276, 20);
+
+  fill(0);
+  rect(850, 600, 126, 20);
+  fill(255);
+  text(weather, 893, 600, 276, 20);
+
+  fill(0);
+  rect(850, 570, 126, 20);
+  fill(255);
+  text(date, 893, 570, 276, 20);
 }
 function southpass(){
   image(img8,0,0,windowWidth,windowHeight);
 }
 function southpasstogrnriver(){
   image(imgop5,0,0,windowWidth,windowHeight);
+  fill(0);
+  rect(850, 690, 126, 20);
+  fill(255);
+  text(nxtlndmrk, 893, 690, 276, 20);
+
+  fill(0);
+  rect(850, 660, 126, 20);
+  fill(255);
+  text(food, 893, 660, 276, 20);
+
+  fill(0);
+  rect(850, 632, 126, 20);
+  fill(255);
+  text(health, 893, 632, 276, 20);
+
+  fill(0);
+  rect(850, 720, 126, 20);
+  fill(255);
+  text(totalmiles, 893, 720, 276, 20);
+
+  fill(0);
+  rect(850, 600, 126, 20);
+  fill(255);
+  text(weather, 893, 600, 276, 20);
+
+  fill(0);
+  rect(850, 570, 126, 20);
+  fill(255);
+  text(date, 893, 570, 276, 20);
 }
 function greenriver(){
   image(img9,0,0,windowWidth,windowHeight);
 }
 function grnrivertosodasprings(){
   image(imgop9,0,0,windowWidth,windowHeight);
+  fill(0);
+  rect(850, 690, 126, 20);
+  fill(255);
+  text(nxtlndmrk, 893, 690, 276, 20);
+
+  fill(0);
+  rect(850, 660, 126, 20);
+  fill(255);
+  text(food, 893, 660, 276, 20);
+
+  fill(0);
+  rect(850, 632, 126, 20);
+  fill(255);
+  text(health, 893, 632, 276, 20);
+
+  fill(0);
+  rect(850, 720, 126, 20);
+  fill(255);
+  text(totalmiles, 893, 720, 276, 20);
+
+  fill(0);
+  rect(850, 600, 126, 20);
+  fill(255);
+  text(weather, 893, 600, 276, 20);
+
+  fill(0);
+  rect(850, 570, 126, 20);
+  fill(255);
+  text(date, 893, 570, 276, 20);
 }
 function sodasprings(){
   image(img10,0,0,windowWidth,windowHeight);
 }
 function sodaspringstofthall(){
   image(imgop2,0,0,windowWidth,windowHeight);
+  fill(0);
+  rect(850, 690, 126, 20);
+  fill(255);
+  text(nxtlndmrk, 893, 690, 276, 20);
+
+  fill(0);
+  rect(850, 660, 126, 20);
+  fill(255);
+  text(food, 893, 660, 276, 20);
+
+  fill(0);
+  rect(850, 632, 126, 20);
+  fill(255);
+  text(health, 893, 632, 276, 20);
+
+  fill(0);
+  rect(850, 720, 126, 20);
+  fill(255);
+  text(totalmiles, 893, 720, 276, 20);
+
+  fill(0);
+  rect(850, 600, 126, 20);
+  fill(255);
+  text(weather, 893, 600, 276, 20);
+
+  fill(0);
+  rect(850, 570, 126, 20);
+  fill(255);
+  text(date, 893, 570, 276, 20);
 }
 function fthall(){
   image(img11,0,0,windowWidth,windowHeight);
 }
 function fthalltosnakeriver(){
   image(imgop5,0,0,windowWidth,windowHeight);
+  fill(0);
+  rect(850, 690, 126, 20);
+  fill(255);
+  text(nxtlndmrk, 893, 690, 276, 20);
+
+  fill(0);
+  rect(850, 660, 126, 20);
+  fill(255);
+  text(food, 893, 660, 276, 20);
+
+  fill(0);
+  rect(850, 632, 126, 20);
+  fill(255);
+  text(health, 893, 632, 276, 20);
+
+  fill(0);
+  rect(850, 720, 126, 20);
+  fill(255);
+  text(totalmiles, 893, 720, 276, 20);
+
+  fill(0);
+  rect(850, 600, 126, 20);
+  fill(255);
+  text(weather, 893, 600, 276, 20);
+
+  fill(0);
+  rect(850, 570, 126, 20);
+  fill(255);
+  text(date, 893, 570, 276, 20);
 }
 function snakeriver(){
   image(img12,0,0,windowWidth,windowHeight);
 }
 function snakerivertoftboise(){
   image(imgop1,0,0,windowWidth,windowHeight);
+  fill(0);
+  rect(850, 690, 126, 20);
+  fill(255);
+  text(nxtlndmrk, 893, 690, 276, 20);
+
+  fill(0);
+  rect(850, 660, 126, 20);
+  fill(255);
+  text(food, 893, 660, 276, 20);
+
+  fill(0);
+  rect(850, 632, 126, 20);
+  fill(255);
+  text(health, 893, 632, 276, 20);
+
+  fill(0);
+  rect(850, 720, 126, 20);
+  fill(255);
+  text(totalmiles, 893, 720, 276, 20);
+
+  fill(0);
+  rect(850, 600, 126, 20);
+  fill(255);
+  text(weather, 893, 600, 276, 20);
+
+  fill(0);
+  rect(850, 570, 126, 20);
+  fill(255);
+  text(date, 893, 570, 276, 20);
 }
 function ftboise(){
   image(img13,0,0,windowWidth,windowHeight);
 }
 function ftboisetobluemnt(){
   image(imgop3,0,0,windowWidth,windowHeight);
+  fill(0);
+  rect(850, 690, 126, 20);
+  fill(255);
+  text(nxtlndmrk, 893, 690, 276, 20);
+
+  fill(0);
+  rect(850, 660, 126, 20);
+  fill(255);
+  text(food, 893, 660, 276, 20);
+
+  fill(0);
+  rect(850, 632, 126, 20);
+  fill(255);
+  text(health, 893, 632, 276, 20);
+
+  fill(0);
+  rect(850, 720, 126, 20);
+  fill(255);
+  text(totalmiles, 893, 720, 276, 20);
+
+  fill(0);
+  rect(850, 600, 126, 20);
+  fill(255);
+  text(weather, 893, 600, 276, 20);
+
+  fill(0);
+  rect(850, 570, 126, 20);
+  fill(255);
+  text(date, 893, 570, 276, 20);
 }
 function bluemnt(){
   image(img14,0,0,windowWidth,windowHeight);
 }
 function bluemnttodales(){
   image(imgop1,0,0,windowWidth,windowHeight);
+  fill(0);
+  rect(850, 690, 126, 20);
+  fill(255);
+  text(nxtlndmrk, 893, 690, 276, 20);
+
+  fill(0);
+  rect(850, 660, 126, 20);
+  fill(255);
+  text(food, 893, 660, 276, 20);
+
+  fill(0);
+  rect(850, 632, 126, 20);
+  fill(255);
+  text(health, 893, 632, 276, 20);
+
+  fill(0);
+  rect(850, 720, 126, 20);
+  fill(255);
+  text(totalmiles, 893, 720, 276, 20);
+
+  fill(0);
+  rect(850, 600, 126, 20);
+  fill(255);
+  text(weather, 893, 600, 276, 20);
+
+  fill(0);
+  rect(850, 570, 126, 20);
+  fill(255);
+  text(date, 893, 570, 276, 20);
 }
 function thedalles(){
   image(img15,0,0,windowWidth,windowHeight);
 }
 function dallestowillamentvly(){
   image(imgop3,0,0,windowWidth,windowHeight);
+  fill(0);
+  rect(850, 690, 126, 20);
+  fill(255);
+  text(nxtlndmrk, 893, 690, 276, 20);
+
+  fill(0);
+  rect(850, 660, 126, 20);
+  fill(255);
+  text(food, 893, 660, 276, 20);
+
+  fill(0);
+  rect(850, 632, 126, 20);
+  fill(255);
+  text(health, 893, 632, 276, 20);
+
+  fill(0);
+  rect(850, 720, 126, 20);
+  fill(255);
+  text(totalmiles, 893, 720, 276, 20);
+
+  fill(0);
+  rect(850, 600, 126, 20);
+  fill(255);
+  text(weather, 893, 600, 276, 20);
+
+  fill(0);
+  rect(850, 570, 126, 20);
+  fill(255);
+  text(date, 893, 570, 276, 20);
 }
 function Willamettevalley(){
   image(img16,0,0,windowWidth,windowHeight);
 }
 function youwin(){
-  image(img);
+  image(imgwin,0,0,windowWidth,windowHeight);
 }
 function youlose(){
-  image;
+  image(imgloose,0,0,windowWidth,windowHeight);
 }
 
 
@@ -401,6 +943,9 @@ function stateis(){
   if (state === 17.5){
     youwin();
   }
+  if (state === 18){
+    youlose();
+  }
 }
 //////////////////////////////////////////////////
 
@@ -484,5 +1029,11 @@ function keyPressed(){
     if (key === " "){
       state =17.5;
     }
+  }
+}
+//////////////////////////////////////////////
+function wagonmovement(){
+  if(state===1.5||state===2.5||state===3.5||state===3.5||state===4.5||state===5.5||state===6.5||state===7.5||state==8.5||state===9.5||state===10.5||state===11.5||state===12.5||state===13.5|state===14.5||state===15.5||state===16.5||state===17.5||){
+    if()
   }
 }
