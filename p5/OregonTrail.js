@@ -1030,10 +1030,12 @@ function keyPressed(){
       state =17.5;
     }
   }
-}
-//////////////////////////////////////////////
-function wagonmovement(){
-  if(state===1.5||state===2.5||state===3.5||state===3.5||state===4.5||state===5.5||state===6.5||state===7.5||state==8.5||state===9.5||state===10.5||state===11.5||state===12.5||state===13.5|state===14.5||state===15.5||state===16.5||state===17.5||){
-    if()
+  if(state===2.5||state===3.5||state===3.5||state===4.5||state===5.5||state===6.5||state===7.5||state===8.5||state===9.5||state===10.5||state===11.5||state===12.5||state===13.5|state===14.5||state===15.5||state===16.5||state===17.5){
+    if(key === "a"){
+      wagon = wagon+2;
+      food = food-2;
+      nxtlndmrk-10;
+    }
   }
 }
+//////////////////////////////////////////////
