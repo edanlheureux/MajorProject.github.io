@@ -3,14 +3,14 @@
 // --/--/2019
 ////////////////////////////////////////////////////////////////////////////////
 let state;
-let food;
-let clothes;
-let wagon;
-let nxtlndmrk;
-let weather;
-let health;
-let totalmiles;
-let date;
+let food = 2000;
+let clothes=20;
+let wagon= 0;
+let nxtlndmrk=150;
+let weather=1;
+let health=100;
+let totalmiles=0;
+let date=0;
 
 
 let music,music1,music2,music3;
@@ -251,12 +251,6 @@ function setup() {
 ///////////////////////////////////////////////
 function draw() {
   stateis();
-  nxtlndmrk = 125;
-  health =100;
-  food =2000;
-  totalmiles=4;
-  weather=5;
-  date= 0,10,1834;
 }
 ///////////////////////////////////////////////
 
@@ -319,6 +313,9 @@ function trailtoriv(){
   rect(850, 570, 126, 20);
   fill(255);
   text(date, 893, 570, 276, 20);
+
+  image(imgwagon,1400,273,140,100);
+
 
 }
 function river1(){
@@ -1033,8 +1030,13 @@ function keyPressed(){
   if(state===2.5||state===3.5||state===3.5||state===4.5||state===5.5||state===6.5||state===7.5||state===8.5||state===9.5||state===10.5||state===11.5||state===12.5||state===13.5|state===14.5||state===15.5||state===16.5||state===17.5){
     if(key === "a"){
       wagon = wagon+2;
-      food = food-2;
-      nxtlndmrk-10;
+      food = food-4;
+      nxtlndmrk = nxtlndmrk-10;
+      totalmiles = totalmiles+7;
+    }
+    image(imgwagon,1400,273,140,100)
+    if(key === "a"){
+      
     }
   }
 }
