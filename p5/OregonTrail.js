@@ -13,6 +13,7 @@ let weather=1;
 let health=100;
 let totalmiles=0;
 let date=0;
+let theshits;
 
 
 let music,music1,music2,music3;
@@ -103,149 +104,149 @@ function preload(){
 function setup() {
   createCanvas(1600, 780);
   state =1;
-  // if(state ===1){
-  //   music.setVolume(0.7);
-  //   music.loop();
-  // }
-  // if(state !==1){
-  //   music.stop();
-  // }
-  // state =2;
-  // if(state ===2){
-  //   music1.setVolume(0.7);
-  //   music1.loop();
-  // }
-  // if(state !==2){
-  //   music1.stop();
-  // }
-  // state =3;
-  // if(state ===3){
-  //   music3.setVolume(0.7);
-  //   music3.loop();
-  // }
-  // if(state !==3){
-  //   music3.stop();
-  // }
-  // state =4;
-  // if(state ===4){
-  //   music4.setVolume(0.7);
-  //   music4.loop();
-  // }
-  // if(state !==4){
-  //   music4.stop();
-  // }
-  // state =5;
-  // if(state ===5){
-  //   music5.setVolume(0.7);
-  //   music5.loop();
-  // }
-  // if(state !==5){
-  //   music5.stop();
-  // }
-  // state =6;
-  // if(state ===6){
-  //   music6.setVolume(0.7);
-  //   music6.loop();
-  // }
-  // if(state !==7){
-  //   music6.stop();
-  // }
-  // state =7;
-  // if(state ===8){
-  //   music7.setVolume(0.7);
-  //   music7.loop();
-  // }
-  // if(state !==7){
-  //   music7.stop();
-  // }
-  // state =8;
-  // if(state ===8){
-  //   music8.setVolume(0.7);
-  //   music8.loop();
-  // }
-  // if(state !==8){
-  //   music8.stop();
-  // }
-  // state =9;
-  // if(state ===9){
-  //   music9.setVolume(0.7);
-  //   music9.loop();
-  // }
-  // if(state !==9){
-  //   music9.stop();
-  // }
-  // state =10;
-  // if(state ===10){
-  //   music10.setVolume(0.7);
-  //   music10.loop();
-  // }
-  // if(state !==10){
-  //   music10.stop();
-  // }
-  // state =11;
-  // if(state ===11){
-  //   music11.setVolume(0.7);
-  //   music11.loop();
-  // }
-  // if(state !==11){
-  //   music11.stop();
-  // }
-  // state =12;
-  // if(state ===12){
-  //   music12.setVolume(0.7);
-  //   music12.loop();
-  // }
-  // if(state !==12){
-  //   music12.stop();
-  // }
-  // state =13;
-  // if(state ===13){
-  //   music13.setVolume(0.7);
-  //   music13.loop();
-  // }
-  // if(state !==13){
-  //   music13.stop();
-  // }
-  // state =14;
-  // if(state ===14){
-  //   music14.setVolume(0.7);
-  //   music14.loop();
-  // }
-  // if(state !==14){
-  //   music14.stop();
-  // }
-  // state =15;
-  // if(state ===15){
-  //   music15.setVolume(0.7);
-  //   music15.loop();
-  // }
-  // if(state !==15){
-  //   music15.stop();
-  // }
-  // state =16;
-  // if(state ===16){
-  //   music16.setVolume(0.7);
-  //   music16.loop();
-  // }
-  // if(state !==16){
-  //   music16.stop();
-  // }
-  // state =17;
-  // if(state ===17){
-  //   music17.setVolume(0.7);
-  //   music17.loop();
-  // }
-  // if(state !==17){
-  //   music17.stop();
-  // }
-  // state =18;
-  // if(state ===18){
-  //   music18.setVolume(0.7);
-  //   music18.loop();
-  // }
-  // if(state !==18){
-  //   music18.stop();
-  // }
+  if(state ===1){
+    music.setVolume(0.7);
+    music.loop();
+  }
+  if(state !==1){
+    music.stop();
+  }
+  state =2;
+  if(state ===2){
+    music1.setVolume(0.7);
+    music1.loop();
+  }
+  if(state !==2){
+    music1.stop();
+  }
+  state =3;
+  if(state ===3){
+    music3.setVolume(0.7);
+    music3.loop();
+  }
+  if(state !==3){
+    music3.stop();
+  }
+  state =4;
+  if(state ===4){
+    music4.setVolume(0.7);
+    music4.loop();
+  }
+  if(state !==4){
+    music4.stop();
+  }
+  state =5;
+  if(state ===5){
+    music5.setVolume(0.7);
+    music5.loop();
+  }
+  if(state !==5){
+    music5.stop();
+  }
+  state =6;
+  if(state ===6){
+    music6.setVolume(0.7);
+    music6.loop();
+  }
+  if(state !==7){
+    music6.stop();
+  }
+  state =7;
+  if(state ===8){
+    music7.setVolume(0.7);
+    music7.loop();
+  }
+  if(state !==7){
+    music7.stop();
+  }
+  state =8;
+  if(state ===8){
+    music8.setVolume(0.7);
+    music8.loop();
+  }
+  if(state !==8){
+    music8.stop();
+  }
+  state =9;
+  if(state ===9){
+    music9.setVolume(0.7);
+    music9.loop();
+  }
+  if(state !==9){
+    music9.stop();
+  }
+  state =10;
+  if(state ===10){
+    music10.setVolume(0.7);
+    music10.loop();
+  }
+  if(state !==10){
+    music10.stop();
+  }
+  state =11;
+  if(state ===11){
+    music11.setVolume(0.7);
+    music11.loop();
+  }
+  if(state !==11){
+    music11.stop();
+  }
+  state =12;
+  if(state ===12){
+    music12.setVolume(0.7);
+    music12.loop();
+  }
+  if(state !==12){
+    music12.stop();
+  }
+  state =13;
+  if(state ===13){
+    music13.setVolume(0.7);
+    music13.loop();
+  }
+  if(state !==13){
+    music13.stop();
+  }
+  state =14;
+  if(state ===14){
+    music14.setVolume(0.7);
+    music14.loop();
+  }
+  if(state !==14){
+    music14.stop();
+  }
+  state =15;
+  if(state ===15){
+    music15.setVolume(0.7);
+    music15.loop();
+  }
+  if(state !==15){
+    music15.stop();
+  }
+  state =16;
+  if(state ===16){
+    music16.setVolume(0.7);
+    music16.loop();
+  }
+  if(state !==16){
+    music16.stop();
+  }
+  state =17;
+  if(state ===17){
+    music17.setVolume(0.7);
+    music17.loop();
+  }
+  if(state !==17){
+    music17.stop();
+  }
+  state =18;
+  if(state ===18){
+    music18.setVolume(0.7);
+    music18.loop();
+  }
+  if(state !==18){
+    music18.stop();
+  }
 }
 ///////////////////////////////////////////
 
@@ -317,6 +318,8 @@ function trailtoriv(){
   text(date, 893, 570, 276, 20);
 
   wagon();
+
+
 
 }
 function river1(){
@@ -1073,115 +1076,115 @@ function keyPressed(){
           state =4;
           nxtlndmrk = nxtlndmrk+150;
           x=1300;
+        }
       }
-    }
-    if(state ===4.5){
-      if(nxtlndmrk===0){
-        state =5;
-        nxtlndmrk = nxtlndmrk+150;
-        x=1300;
+      if(state ===4.5){
+        if(nxtlndmrk===0){
+          state =5;
+          nxtlndmrk = nxtlndmrk+150;
+          x=1300;
+        }
       }
-    }
-    if(state ===5.5){
-      if(nxtlndmrk===0){
-        state =6;
-        nxtlndmrk = nxtlndmrk+150;
-        x=1300;
+      if(state ===5.5){
+        if(nxtlndmrk===0){
+          state =6;
+          nxtlndmrk = nxtlndmrk+150;
+          x=1300;
+        }
       }
-    }
-    if(state ===6.5){
-      if(nxtlndmrk===0){
-        state =7;
-        nxtlndmrk = nxtlndmrk+150;
-        x=1300;
+      if(state ===6.5){
+        if(nxtlndmrk===0){
+          state =7;
+          nxtlndmrk = nxtlndmrk+150;
+          x=1300;
+        }
       }
-    }
-    if(state ===6.5){
-      if(nxtlndmrk===0){
-        state =7;
-        nxtlndmrk = nxtlndmrk+150;
-        x=1300;
+      if(state ===6.5){
+        if(nxtlndmrk===0){
+          state =7;
+          nxtlndmrk = nxtlndmrk+150;
+          x=1300;
+        }
       }
-    }
-    if(state ===7.5){
-      if(nxtlndmrk===0){
-        state =8;
-        nxtlndmrk = nxtlndmrk+150;
-        x=1300;
+      if(state ===7.5){
+        if(nxtlndmrk===0){
+          state =8;
+          nxtlndmrk = nxtlndmrk+150;
+          x=1300;
+        }
       }
-    }
-    if(state ===8.5){
-      if(nxtlndmrk===0){
-        state =9;
-        nxtlndmrk = nxtlndmrk+150;
-        x=1300;
+      if(state ===8.5){
+        if(nxtlndmrk===0){
+          state =9;
+          nxtlndmrk = nxtlndmrk+150;
+          x=1300;
+        }
       }
-    }
-    if(state ===9.5){
-      if(nxtlndmrk===0){
-        state =10;
-        nxtlndmrk = nxtlndmrk+150;
-        x=1300;
+      if(state ===9.5){
+        if(nxtlndmrk===0){
+          state =10;
+          nxtlndmrk = nxtlndmrk+150;
+          x=1300;
+        }
       }
-    }
-    if(state ===10.5){
-      if(nxtlndmrk===0){
-        state =11;
-        nxtlndmrk = nxtlndmrk+150;
-        x=1300;
+      if(state ===10.5){
+        if(nxtlndmrk===0){
+          state =11;
+          nxtlndmrk = nxtlndmrk+150;
+          x=1300;
+        }
       }
-    }
-    if(state ===11.5){
-      if(nxtlndmrk===0){
-        state =12;
-        nxtlndmrk = nxtlndmrk+150;
-        x=1300;
+      if(state ===11.5){
+        if(nxtlndmrk===0){
+          state =12;
+          nxtlndmrk = nxtlndmrk+150;
+          x=1300;
+        }
       }
-    }
-    if(state ===12.5){
-      if(nxtlndmrk===0){
-        state =13;
-        nxtlndmrk = nxtlndmrk+150;
-        x=1300;
+      if(state ===12.5){
+        if(nxtlndmrk===0){
+          state =13;
+          nxtlndmrk = nxtlndmrk+150;
+          x=1300;
+        }
       }
-    }
-    if(state ===613.5){
-      if(nxtlndmrk===0){
-        state =14;
-        nxtlndmrk = nxtlndmrk+150;
-        x=1300;
+      if(state ===613.5){
+        if(nxtlndmrk===0){
+          state =14;
+          nxtlndmrk = nxtlndmrk+150;
+          x=1300;
+        }
       }
-    }
-    if(state ===14.5){
-      if(nxtlndmrk===0){
-        state =15;
-        nxtlndmrk = nxtlndmrk+150;
-        x=1300;
+      if(state ===14.5){
+        if(nxtlndmrk===0){
+          state =15;
+          nxtlndmrk = nxtlndmrk+150;
+          x=1300;
+        }
       }
-    }
-    if(state ===15.5){
-      if(nxtlndmrk===0){
-        state =16;
-        nxtlndmrk = nxtlndmrk+150;
-        x=1300;
+      if(state ===15.5){
+        if(nxtlndmrk===0){
+          state =16;
+          nxtlndmrk = nxtlndmrk+150;
+          x=1300;
+        }
       }
-    }
-    if(state ===16.5){
-      if(nxtlndmrk===0){
-        state =17;
-        nxtlndmrk = nxtlndmrk+150;
-        x=1300;
+      if(state ===16.5){
+        if(nxtlndmrk===0){
+          state =17;
+          nxtlndmrk = nxtlndmrk+150;
+          x=1300;
+        }
       }
     }
   }
-}
 }
 //////////////////////////////////////////////
 
 function wagon(){
   // this.x = 1300;
   // this.y = 275
-  image(imgwagon,x,275,130,120)
+  image(imgwagon,x,275,130,120);
   if(keyIsPressed){
     if(key==="a"){
       x = x-15;
