@@ -2,10 +2,12 @@
 // Edan L'Heureux
 // --/--/2019
 ////////////////////////////////////////////////////////////////////////////////
+let x = 1300;
+
 let state;
 let food = 2000;
 let clothes=20;
-let wagon= 0;
+let wagonis;
 let nxtlndmrk=150;
 let weather=1;
 let health=100;
@@ -314,8 +316,7 @@ function trailtoriv(){
   fill(255);
   text(date, 893, 570, 276, 20);
 
-  image(imgwagon,1400,273,140,100);
-
+  wagon();
 
 }
 function river1(){
@@ -352,6 +353,8 @@ function river1toriver2(){
   rect(850, 570, 126, 20);
   fill(255);
   text(date, 893, 570, 276, 20);
+
+  wagon();
 }
 function river2(){
   image(img3,0,0,windowWidth,windowHeight);
@@ -387,6 +390,8 @@ function riv2tofrtkern(){
   rect(850, 570, 126, 20);
   fill(255);
   text(date, 893, 570, 276, 20);
+
+  wagon();
 }
 function fortkern(){
   image(img4,0,0,windowWidth,windowHeight);
@@ -422,6 +427,8 @@ function fortkerntochimney(){
   rect(850, 570, 126, 20);
   fill(255);
   text(date, 893, 570, 276, 20);
+
+  wagon();
 }
 function chimneyrck(){
   image(img5,0,0,windowWidth,windowHeight);
@@ -457,6 +464,8 @@ function chimtofrtlarm(){
   rect(850, 570, 126, 20);
   fill(255);
   text(date, 893, 570, 276, 20);
+
+  wagon();
 }
 function fortlarm(){
   image(img6,0,0,windowWidth,windowHeight);
@@ -492,6 +501,8 @@ function fortlarmtoindiroc(){
   rect(850, 570, 126, 20);
   fill(255);
   text(date, 893, 570, 276, 20);
+
+  wagon();
 }
 function indirock(){
   image(img7,0,0,windowWidth,windowHeight);
@@ -527,6 +538,8 @@ function indirocktosouthpass(){
   rect(850, 570, 126, 20);
   fill(255);
   text(date, 893, 570, 276, 20);
+
+  wagon();
 }
 function southpass(){
   image(img8,0,0,windowWidth,windowHeight);
@@ -562,6 +575,8 @@ function southpasstogrnriver(){
   rect(850, 570, 126, 20);
   fill(255);
   text(date, 893, 570, 276, 20);
+
+  wagon();
 }
 function greenriver(){
   image(img9,0,0,windowWidth,windowHeight);
@@ -597,6 +612,8 @@ function grnrivertosodasprings(){
   rect(850, 570, 126, 20);
   fill(255);
   text(date, 893, 570, 276, 20);
+
+  wagon();
 }
 function sodasprings(){
   image(img10,0,0,windowWidth,windowHeight);
@@ -632,6 +649,8 @@ function sodaspringstofthall(){
   rect(850, 570, 126, 20);
   fill(255);
   text(date, 893, 570, 276, 20);
+
+  wagon();
 }
 function fthall(){
   image(img11,0,0,windowWidth,windowHeight);
@@ -667,6 +686,8 @@ function fthalltosnakeriver(){
   rect(850, 570, 126, 20);
   fill(255);
   text(date, 893, 570, 276, 20);
+
+  wagon();
 }
 function snakeriver(){
   image(img12,0,0,windowWidth,windowHeight);
@@ -702,6 +723,8 @@ function snakerivertoftboise(){
   rect(850, 570, 126, 20);
   fill(255);
   text(date, 893, 570, 276, 20);
+
+  wagon();
 }
 function ftboise(){
   image(img13,0,0,windowWidth,windowHeight);
@@ -737,6 +760,8 @@ function ftboisetobluemnt(){
   rect(850, 570, 126, 20);
   fill(255);
   text(date, 893, 570, 276, 20);
+
+  wagon();
 }
 function bluemnt(){
   image(img14,0,0,windowWidth,windowHeight);
@@ -772,6 +797,8 @@ function bluemnttodales(){
   rect(850, 570, 126, 20);
   fill(255);
   text(date, 893, 570, 276, 20);
+
+  wagon();
 }
 function thedalles(){
   image(img15,0,0,windowWidth,windowHeight);
@@ -807,6 +834,8 @@ function dallestowillamentvly(){
   rect(850, 570, 126, 20);
   fill(255);
   text(date, 893, 570, 276, 20);
+
+  wagon();
 }
 function Willamettevalley(){
   image(img16,0,0,windowWidth,windowHeight);
@@ -1029,15 +1058,133 @@ function keyPressed(){
   }
   if(state===2.5||state===3.5||state===3.5||state===4.5||state===5.5||state===6.5||state===7.5||state===8.5||state===9.5||state===10.5||state===11.5||state===12.5||state===13.5|state===14.5||state===15.5||state===16.5||state===17.5){
     if(key === "a"){
-      wagon = wagon+2;
       food = food-4;
       nxtlndmrk = nxtlndmrk-10;
       totalmiles = totalmiles+7;
+      if(state ===2.5){
+        if(nxtlndmrk===0){
+          state =3;
+          nxtlndmrk = nxtlndmrk+100;
+          x=1300;
+        }
+      }
+      if(state ===3.5){
+        if(nxtlndmrk===0){
+          state =4;
+          nxtlndmrk = nxtlndmrk+150;
+          x=1300;
+      }
     }
-    image(imgwagon,1400,273,140,100)
-    if(key === "a"){
-      
+    if(state ===4.5){
+      if(nxtlndmrk===0){
+        state =5;
+        nxtlndmrk = nxtlndmrk+150;
+        x=1300;
+      }
+    }
+    if(state ===5.5){
+      if(nxtlndmrk===0){
+        state =6;
+        nxtlndmrk = nxtlndmrk+150;
+        x=1300;
+      }
+    }
+    if(state ===6.5){
+      if(nxtlndmrk===0){
+        state =7;
+        nxtlndmrk = nxtlndmrk+150;
+        x=1300;
+      }
+    }
+    if(state ===6.5){
+      if(nxtlndmrk===0){
+        state =7;
+        nxtlndmrk = nxtlndmrk+150;
+        x=1300;
+      }
+    }
+    if(state ===7.5){
+      if(nxtlndmrk===0){
+        state =8;
+        nxtlndmrk = nxtlndmrk+150;
+        x=1300;
+      }
+    }
+    if(state ===8.5){
+      if(nxtlndmrk===0){
+        state =9;
+        nxtlndmrk = nxtlndmrk+150;
+        x=1300;
+      }
+    }
+    if(state ===9.5){
+      if(nxtlndmrk===0){
+        state =10;
+        nxtlndmrk = nxtlndmrk+150;
+        x=1300;
+      }
+    }
+    if(state ===10.5){
+      if(nxtlndmrk===0){
+        state =11;
+        nxtlndmrk = nxtlndmrk+150;
+        x=1300;
+      }
+    }
+    if(state ===11.5){
+      if(nxtlndmrk===0){
+        state =12;
+        nxtlndmrk = nxtlndmrk+150;
+        x=1300;
+      }
+    }
+    if(state ===12.5){
+      if(nxtlndmrk===0){
+        state =13;
+        nxtlndmrk = nxtlndmrk+150;
+        x=1300;
+      }
+    }
+    if(state ===613.5){
+      if(nxtlndmrk===0){
+        state =14;
+        nxtlndmrk = nxtlndmrk+150;
+        x=1300;
+      }
+    }
+    if(state ===14.5){
+      if(nxtlndmrk===0){
+        state =15;
+        nxtlndmrk = nxtlndmrk+150;
+        x=1300;
+      }
+    }
+    if(state ===15.5){
+      if(nxtlndmrk===0){
+        state =16;
+        nxtlndmrk = nxtlndmrk+150;
+        x=1300;
+      }
+    }
+    if(state ===16.5){
+      if(nxtlndmrk===0){
+        state =17;
+        nxtlndmrk = nxtlndmrk+150;
+        x=1300;
+      }
     }
   }
 }
+}
 //////////////////////////////////////////////
+
+function wagon(){
+  // this.x = 1300;
+  // this.y = 275
+  image(imgwagon,x,275,130,120)
+  if(keyIsPressed){
+    if(key==="a"){
+      x = x-15;
+    }
+  }
+}
