@@ -33,6 +33,7 @@ let imgop1,imgop2,imgop3,imgop4,imgop5;
 let imgop6,imgop7,imgop8,imgop9,imgop10;
 let imgop11,imgop12,imgop13;
 
+let imgshop,imgtown;
 
 ////////////////////////////////////////////////////////////////////////////////
 function preload(){
@@ -81,6 +82,8 @@ function preload(){
   imgwagon = loadImage("assets/wagon.PNG");
   imgwin = loadImage("assets/youwin.png");
   imgloose = loadImage("assets/youlose.png");
+  imgshop = loadImage("assets/shop.png");
+  imgtown = loadImage("assets/townmenu.png")
   ////////////////////////////////////////////////////////////////////////
   /// open world events and locations
   imgop1 = loadImage("assets/openworldfort.PNG");
@@ -101,6 +104,7 @@ function preload(){
 
 
 //////////////////////////////////////////////
+/// plays music and starts code off at state 1
 function setup() {
   createCanvas(1600, 780);
   state =1;
@@ -111,7 +115,6 @@ function setup() {
   if(state !==1){
     music.stop();
   }
-  state =2;
   if(state ===2){
     music1.setVolume(0.7);
     music1.loop();
@@ -119,7 +122,6 @@ function setup() {
   if(state !==2){
     music1.stop();
   }
-  state =3;
   if(state ===3){
     music3.setVolume(0.7);
     music3.loop();
@@ -127,7 +129,6 @@ function setup() {
   if(state !==3){
     music3.stop();
   }
-  state =4;
   if(state ===4){
     music4.setVolume(0.7);
     music4.loop();
@@ -135,7 +136,6 @@ function setup() {
   if(state !==4){
     music4.stop();
   }
-  state =5;
   if(state ===5){
     music5.setVolume(0.7);
     music5.loop();
@@ -143,7 +143,6 @@ function setup() {
   if(state !==5){
     music5.stop();
   }
-  state =6;
   if(state ===6){
     music6.setVolume(0.7);
     music6.loop();
@@ -151,7 +150,6 @@ function setup() {
   if(state !==7){
     music6.stop();
   }
-  state =7;
   if(state ===8){
     music7.setVolume(0.7);
     music7.loop();
@@ -159,7 +157,6 @@ function setup() {
   if(state !==7){
     music7.stop();
   }
-  state =8;
   if(state ===8){
     music8.setVolume(0.7);
     music8.loop();
@@ -167,7 +164,6 @@ function setup() {
   if(state !==8){
     music8.stop();
   }
-  state =9;
   if(state ===9){
     music9.setVolume(0.7);
     music9.loop();
@@ -175,7 +171,6 @@ function setup() {
   if(state !==9){
     music9.stop();
   }
-  state =10;
   if(state ===10){
     music10.setVolume(0.7);
     music10.loop();
@@ -183,7 +178,6 @@ function setup() {
   if(state !==10){
     music10.stop();
   }
-  state =11;
   if(state ===11){
     music11.setVolume(0.7);
     music11.loop();
@@ -191,7 +185,6 @@ function setup() {
   if(state !==11){
     music11.stop();
   }
-  state =12;
   if(state ===12){
     music12.setVolume(0.7);
     music12.loop();
@@ -199,7 +192,6 @@ function setup() {
   if(state !==12){
     music12.stop();
   }
-  state =13;
   if(state ===13){
     music13.setVolume(0.7);
     music13.loop();
@@ -207,7 +199,6 @@ function setup() {
   if(state !==13){
     music13.stop();
   }
-  state =14;
   if(state ===14){
     music14.setVolume(0.7);
     music14.loop();
@@ -215,7 +206,6 @@ function setup() {
   if(state !==14){
     music14.stop();
   }
-  state =15;
   if(state ===15){
     music15.setVolume(0.7);
     music15.loop();
@@ -223,7 +213,6 @@ function setup() {
   if(state !==15){
     music15.stop();
   }
-  state =16;
   if(state ===16){
     music16.setVolume(0.7);
     music16.loop();
@@ -231,7 +220,6 @@ function setup() {
   if(state !==16){
     music16.stop();
   }
-  state =17;
   if(state ===17){
     music17.setVolume(0.7);
     music17.loop();
@@ -239,7 +227,6 @@ function setup() {
   if(state !==17){
     music17.stop();
   }
-  state =18;
   if(state ===18){
     music18.setVolume(0.7);
     music18.loop();
@@ -274,16 +261,17 @@ function mainmenu(){
   textStyle(ITALIC);
   textSize(20);
   text("Travel The Trail",1220, 715);
-/////////////////////////////////////////////////////////
 }
+/////////////////////////////////////////////////////////
+
+
+
 ////////////////////////////////////////////////////////
+//
 function gametime(){
   image(img1,0,0,windowWidth,windowHeight);
-//   music1.setVolume(0.7);
-//   music1.loop();
 }
-////////////////////////////////////////////////////////
-
+//////////////////////////////////////////////////////
 function trailtoriv(){
   image(imgop5,0,0,windowWidth,windowHeight);
 
@@ -318,10 +306,9 @@ function trailtoriv(){
   text(date, 893, 570, 276, 20);
 
   wagon();
-
-
-
 }
+////////////////////////////////////////////////////
+
 function river1(){
   image(img2,0,0,windowWidth,windowHeight);
 }
@@ -359,6 +346,8 @@ function river1toriver2(){
 
   wagon();
 }
+//////////////////////////////////////////////////
+
 function river2(){
   image(img3,0,0,windowWidth,windowHeight);
 }
@@ -396,9 +385,13 @@ function riv2tofrtkern(){
 
   wagon();
 }
+/////////////////////////////////////////
+
 function fortkern(){
   image(img4,0,0,windowWidth,windowHeight);
 }
+/////////////////////////////////////////////
+
 function fortkerntochimney(){
   image(imgop6,0,0,windowWidth,windowHeight);
   fill(0);
@@ -433,9 +426,13 @@ function fortkerntochimney(){
 
   wagon();
 }
+//////////////////////////////////////////
+
 function chimneyrck(){
   image(img5,0,0,windowWidth,windowHeight);
 }
+///////////////////////////////////////////////
+
 function chimtofrtlarm(){
   image(imgop2,0,0,windowWidth,windowHeight);
   fill(0);
@@ -470,9 +467,12 @@ function chimtofrtlarm(){
 
   wagon();
 }
+///////////////////////////////////////////////////////////
 function fortlarm(){
   image(img6,0,0,windowWidth,windowHeight);
 }
+//////////////////////////////////////////////////
+
 function fortlarmtoindiroc(){
   image(imgop7,0,0,windowWidth,windowHeight);
   fill(0);
@@ -507,9 +507,13 @@ function fortlarmtoindiroc(){
 
   wagon();
 }
+//////////////////////////////////////////////////
+
 function indirock(){
   image(img7,0,0,windowWidth,windowHeight);
 }
+/////////////////////////////////////////////////
+
 function indirocktosouthpass(){
   image(imgop8,0,0,windowWidth,windowHeight);
   fill(0);
@@ -544,9 +548,12 @@ function indirocktosouthpass(){
 
   wagon();
 }
+//////////////////////////////////////////////
+
 function southpass(){
   image(img8,0,0,windowWidth,windowHeight);
 }
+///////////////////////////////////////////////////////////////////////////
 function southpasstogrnriver(){
   image(imgop5,0,0,windowWidth,windowHeight);
   fill(0);
@@ -581,9 +588,11 @@ function southpasstogrnriver(){
 
   wagon();
 }
+//////////////////////////////////////////
 function greenriver(){
-  image(img9,0,0,windowWidth,windowHeight);
+  image(img10,0,0,windowWidth,windowHeight);
 }
+////////////////////////////////////////
 function grnrivertosodasprings(){
   image(imgop9,0,0,windowWidth,windowHeight);
   fill(0);
@@ -618,9 +627,12 @@ function grnrivertosodasprings(){
 
   wagon();
 }
+/////////////////////////////////////////////////////////////
 function sodasprings(){
   image(img10,0,0,windowWidth,windowHeight);
 }
+///////////////////////////////////////////////////////
+
 function sodaspringstofthall(){
   image(imgop2,0,0,windowWidth,windowHeight);
   fill(0);
@@ -655,9 +667,13 @@ function sodaspringstofthall(){
 
   wagon();
 }
+//////////////////////////////////////////////////////////////////////////
+
 function fthall(){
   image(img11,0,0,windowWidth,windowHeight);
 }
+/////////////////////////////////////////////////////////////
+
 function fthalltosnakeriver(){
   image(imgop5,0,0,windowWidth,windowHeight);
   fill(0);
@@ -692,9 +708,11 @@ function fthalltosnakeriver(){
 
   wagon();
 }
+//////////////////////////////////////////
 function snakeriver(){
   image(img12,0,0,windowWidth,windowHeight);
 }
+/////////////////////////////////////////
 function snakerivertoftboise(){
   image(imgop1,0,0,windowWidth,windowHeight);
   fill(0);
@@ -729,9 +747,11 @@ function snakerivertoftboise(){
 
   wagon();
 }
+//////////////////////////////////////////////////
 function ftboise(){
   image(img13,0,0,windowWidth,windowHeight);
 }
+////////////////////////////////////////
 function ftboisetobluemnt(){
   image(imgop3,0,0,windowWidth,windowHeight);
   fill(0);
@@ -766,9 +786,12 @@ function ftboisetobluemnt(){
 
   wagon();
 }
+///////////////////////////////////////////////
+
 function bluemnt(){
   image(img14,0,0,windowWidth,windowHeight);
 }
+//////////////////////////////////////////////////
 function bluemnttodales(){
   image(imgop1,0,0,windowWidth,windowHeight);
   fill(0);
@@ -803,9 +826,11 @@ function bluemnttodales(){
 
   wagon();
 }
+///////////////////////////////////////////////////////
 function thedalles(){
   image(img15,0,0,windowWidth,windowHeight);
 }
+///////////////////////////////////////////////////////
 function dallestowillamentvly(){
   image(imgop3,0,0,windowWidth,windowHeight);
   fill(0);
@@ -840,19 +865,28 @@ function dallestowillamentvly(){
 
   wagon();
 }
+//////////////////////////////////////////////
 function Willamettevalley(){
   image(img16,0,0,windowWidth,windowHeight);
 }
+/////////////////////////////////////////////
+
 function youwin(){
   image(imgwin,0,0,windowWidth,windowHeight);
 }
+//////////////////////////////////////////////////
 function youlose(){
   image(imgloose,0,0,windowWidth,windowHeight);
 }
-
-
-
-
+//////////////////////////////////////////////////////
+function shop(){
+  image(imgshop,0,0,windowWidth,windowHeight);
+}
+//////////////////////////////////////////////////////
+function townmenu(){
+  image(imgtown,0,0,windowWidth,windowHeight);
+}
+/////////////////////////////////////////////////////////////////////
 
 
 
@@ -975,93 +1009,461 @@ function stateis(){
   if (state === 18){
     youlose();
   }
+  /////////////////////////////////////
+  /// different shops per town
+  if (state ===100){
+    shop();
+  }
+  if (state ===200){
+    shop();
+  }
+  if (state ===300){
+    shop();
+  }
+  if (state ===400){
+    shop();
+  }
+  if (state ===500){
+    shop();
+  }
+  if (state ===600){
+    shop();
+  }
+  if (state ===700){
+    shop();
+  }
+  if (state ===800){
+    shop();
+  }
+  if (state ===900){
+    shop();
+  }
+  if (state ===1000){
+    shop();
+  }
+  if (state ===1100){
+    shop();
+  }
+  if (state ===1200){
+    shop();
+  }
+  if (state ===1300){
+    shop();
+  }
+  if (state ===1400){
+    shop();
+  }
+  if (state ===1500){
+    shop();
+  }
+  if (state ===1600){
+    shop();
+  }
+  if (state ===1700){
+    shop();
+  }
+  ////////////////////////////////////////////
+  /// different townmenus
+  if (state ===10000){
+    townmenu();
+  }
+  if (state ===20000){
+    townmenu();
+  }
+  if (state ===30000){
+    townmenu();
+  }
+  if (state ===40000){
+    townmenu();
+  }
+  if (state ===50000){
+    townmenu();
+  }
+  if (state ===60000){
+    townmenu();
+  }
+  if (state ===70000){
+    townmenu();
+  }
+  if (state ===80000){
+    townmenu();
+  }
+  if (state ===90000){
+    townmenu();
+  }
+  if (state ===100000){
+    townmenu();
+  }
+  if (state ===110000){
+    townmenu();
+  }
+  if (state ===120000){
+    townmenu();
+  }
+  if (state ===130000){
+    townmenu();
+  }
+  if (state ===140000){
+    townmenu();
+  }
+  if (state ===150000){
+    townmenu();
+  }
+  if (state ===160000){
+    townmenu();
+  }
+  if (state ===170000){
+    townmenu();
+  }
 }
 //////////////////////////////////////////////////
 
 function keyPressed(){
   if (state === 2){
     if (key === " "){
+      state =20000;
+    }
+  }
+  if(state === 20000){
+    if (key === "a"){
+      state =200;
+    }
+  }
+  if(state === 200){
+    if (key === " "){
+      state =20000;
+    }
+  }
+  if(state === 20000){
+    if (key === "l"){
       state =2.5;
     }
   }
+  ///////////////////////////
   if (state === 3){
     if (key === " "){
+      state = 30000;
+    }
+  }
+  if(state === 30000){
+    if (key === "a"){
+      state =300;
+    }
+  }
+  if(state === 300){
+    if (key === " "){
+      state =30000;
+    }
+  }
+  if(state === 30000){
+    if (key === "l"){
       state =3.5;
     }
   }
+  ///////////////////////////////
   if (state === 4){
     if (key === " "){
+      state =40000;
+    }
+  }
+  if(state === 40000){
+    if (key === "a"){
+      state =400;
+    }
+  }
+  if(state === 400){
+    if (key === " "){
+      state =40000;
+    }
+  }
+  if(state === 40000){
+    if (key === "l"){
       state =4.5;
     }
   }
+///////////////////////////////////
   if (state === 5){
     if (key === " "){
+      state =50000;
+    }
+  }
+  if(state === 50000){
+    if (key === "a"){
+      state =500;
+    }
+  }
+  if(state === 500){
+    if (key === " "){
+      state =50000;
+    }
+  }
+  if(state === 50000){
+    if (key === "l"){
       state =5.5;
     }
   }
+  ////////////////////////////
   if (state === 6){
     if (key === " "){
+      state =60000;
+    }
+  }
+  if(state === 60000){
+    if (key === "a"){
+      state =600;
+    }
+  }
+  if(state === 600){
+    if (key === " "){
+      state =60000;
+    }
+  }
+  if(state === 60000){
+    if (key === "l"){
       state =6.5;
     }
   }
+////////////////////////////////////////////
   if (state === 7){
     if (key === " "){
+      state =70000;
+    }
+  }
+  if(state === 70000){
+    if (key === "a"){
+      state =700;
+    }
+  }
+  if(state === 700){
+    if (key === " "){
+      state =70000;
+    }
+  }
+  if(state === 70000){
+    if (key === "l"){
       state =7.5;
     }
   }
+/////////////////////////////////////////////
   if (state === 8){
     if (key === " "){
+      state =80000;
+    }
+  }
+  if(state === 80000){
+    if (key === "a"){
+      state =800;
+    }
+  }
+  if(state === 800){
+    if (key === " "){
+      state =80000;
+    }
+  }
+  if(state === 80000){
+    if (key === "l"){
       state =8.5;
     }
   }
+//////////////////////////////////////////////
   if (state === 9){
     if (key === " "){
+      state =90000;
+    }
+  }
+  if(state === 90000){
+    if (key === "a"){
+      state =900;
+    }
+  }
+  if(state === 900){
+    if (key === " "){
+      state =90000;
+    }
+  }
+  if(state === 90000){
+    if (key === "l"){
       state =9.5;
     }
   }
+///////////////////////////////////////////////////
   if (state === 10){
     if (key === " "){
+      state =100000;
+    }
+  }
+  if(state === 100000){
+    if (key === "a"){
+    state =1000;
+    }
+  }
+  if(state === 1000){
+    if (key === " "){
+      state =100000;
+    }
+  }
+  if(state === 100000){
+    if (key === "l"){
       state =10.5;
     }
   }
+/////////////////////////////////////////////////////
   if (state === 11){
     if (key === " "){
+      state =110000;
+    }
+  }
+  if(state === 110000){
+    if (key === "a"){
+      state =1100;
+    }
+  }
+  if(state === 1100){
+    if (key === " "){
+      state =110000;
+    }
+  }
+  if(state === 110000){
+    if (key === "l"){
       state =11.5;
     }
   }
+//////////////////////////////////////////////////////
   if (state === 12){
     if (key === " "){
+      state =120000;
+    }
+  }
+  if(state === 120000){
+    if (key === "a"){
+      state =1200;
+    }
+  }
+  if(state === 1200){
+    if (key === " "){
+      state =120000;
+    }
+  }
+  if(state === 120000){
+    if (key === "l"){
       state =12.5;
     }
   }
+//////////////////////////////////////////////////
   if (state === 13){
     if (key === " "){
+      state =130000;
+    }
+  }
+  if(state === 130000){
+    if (key === "a"){
+      state =1300;
+    }
+  }
+  if(state === 1300){
+    if (key === " "){
+      state =130000;
+    }
+  }
+  if(state === 130000){
+    if (key === "l"){
       state =13.5;
     }
   }
+////////////////////////////////////////////////////////
   if (state === 14){
     if (key === " "){
+      state =140000;
+    }
+  }
+  if(state === 140000){
+    if (key === "a"){
+      state =1400;
+    }
+  }
+  if(state === 1400){
+    if (key === " "){
+      state =140000;
+    }
+  }
+  if(state === 140000){
+    if (key === "l"){
       state =14.5;
     }
   }
+////////////////////////////////////////////////////////
   if (state === 15){
     if (key === " "){
+      state =150000;
+    }
+  }
+  if(state === 150000){
+    if (key === "a"){
+      state =1500;
+    }
+  }
+  if(state === 1500){
+    if (key === " "){
+      state =150000;
+    }
+  }
+  if(state === 150000){
+    if (key === "l"){
       state =15.5;
     }
   }
+/////////////////////////////////////////////////////////
   if (state === 16){
     if (key === " "){
-      state =16.5;
+      state =160000;
     }
   }
+  if(state === 160000){
+    if (key === "a"){
+      state =1600;
+    }
+  }
+  if(state === 1600){
+    if (key === " "){
+      state =160000;
+    }
+  }
+  if(state === 160000){
+    if (key === "l"){
+      state =2.5;
+    }
+  }
+////////////////////////////////////////////////
   if (state === 17){
     if (key === " "){
+      state =170000;
+    }
+  }
+  if(state === 170000){
+    if (key === "a"){
+      state =1700;
+    }
+  }
+  if(state === 1700){
+    if (key === " "){
+      state =170000;
+    }
+  }
+  if(state === 170000){
+    if (key === "l"){
       state =17.5;
     }
   }
+/////////////////////////////////////////////////
   if(state===2.5||state===3.5||state===3.5||state===4.5||state===5.5||state===6.5||state===7.5||state===8.5||state===9.5||state===10.5||state===11.5||state===12.5||state===13.5|state===14.5||state===15.5||state===16.5||state===17.5){
     if(key === "a"){
       food = food-4;
+      if(food ===0){
+        state = 18;
+      }
+      if(health ===0){
+        state=18;
+      }
       nxtlndmrk = nxtlndmrk-10;
       totalmiles = totalmiles+7;
       if(state ===2.5){
@@ -1148,7 +1550,7 @@ function keyPressed(){
           x=1300;
         }
       }
-      if(state ===613.5){
+      if(state ===13.5){
         if(nxtlndmrk===0){
           state =14;
           nxtlndmrk = nxtlndmrk+150;
@@ -1176,6 +1578,32 @@ function keyPressed(){
           x=1300;
         }
       }
+      if (theshits === true){
+        health = heath-5
+      }
+    }
+  }
+  //////////////////////////////////////////////////////////////////////////
+  if(state === 100||state === 200||state === 300||state === 400||state === 500||state === 600||state === 700||state === 800||state === 900||state === 1000||state === 1100||state === 1200||state === 1300||state === 1400||state === 1500||state === 1600||state === 1700){
+    if(key ==="a"){
+      food =food +10;
+    }
+    if(key === "s"){
+      if(health <= 100){
+        health = health +0;
+      }
+      if(health >100){
+        health = health+50;
+      }
+      if (key === "f"){
+        theshits = true;
+      }
+    }
+  }
+  ////////////////////////////////////////////////////////////////////////
+  if(state === 10000||state === 20000||state === 30000||state === 40000||state === 50000||state === 60000||state === 70000||state === 80000||state === 90000||state === 100000||state === 110000||state === 120000||state === 130000||state === 140000||state === 150000||state === 160000||state === 170000){
+    if(key ==="s"){
+      state = 18;
     }
   }
 }
